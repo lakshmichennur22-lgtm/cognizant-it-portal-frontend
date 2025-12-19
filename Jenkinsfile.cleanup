@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Terraform infra destroy') {
+            steps {
+                sh 'cd IaaC
+                    ls
+                    terraform init -reconfigure -backend-config=dev/backend.tfvars
+                    terraform destroy -auto-approve -var-file=dev/dev.tfvars'
+            }
+        }
+
+    }
+}    
