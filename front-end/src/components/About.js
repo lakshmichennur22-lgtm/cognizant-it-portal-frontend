@@ -4,7 +4,7 @@ function About() {
     return (
         <section className="about" id="about">
             <h2>About Us</h2>
-            <p>Cognisant SoftSol is an IT consulatancy company that delivers modern web solutions, training, and support for our clients.</p>
+            <p>Cognisant SoftSolution is an IT consulatancy company that delivers modern web solutions, training, and support for our clients.</p>
         </section>
     );
 }
