@@ -11,9 +11,9 @@ pipeline {
                     sh '''
                         cd IaaC
                         terraform init -reconfigure -backend-config=dev/backend.tfvars
-                        terraform destroy -auto-approve -var-file=dev/dev.tfvars'
+                        terraform destroy -auto-approve -var-file=dev/dev.tfvars
                     '''
-                    }
+                }
             }
         }
     }
